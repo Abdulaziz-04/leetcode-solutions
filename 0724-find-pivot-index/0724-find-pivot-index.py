@@ -3,19 +3,14 @@ class Solution:
         # Maintain prefix and postfix sum excluding the index value 
         # Compare  them at different indices 
         # If no result is found, return -1
-        prefix_arr=[0]*len(nums)
-        postfix_arr=[0]*len(nums)
-        total=0
+        # O(1) space solution will be to update pre and post directly on go
+        # O(n) is to keep arrays for pre and post calculation
+        pre,post=0,sum(nums)
         for i,n in enumerate(nums):
-            prefix_arr[i]=total
-            total+=n
-        total=0
-        for i in range(len(nums)-1,-1,-1):
-            postfix_arr[i]=total
-            total+=nums[i]
-        for i in range(len(prefix_arr)):
-            if prefix_arr[i]==postfix_arr[i]:
+            post-=n
+            if pre==post:
                 return i
+            pre+=n
         return -1
         
         
