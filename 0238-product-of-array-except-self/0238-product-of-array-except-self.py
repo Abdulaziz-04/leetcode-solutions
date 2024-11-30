@@ -10,5 +10,5 @@ class Solution:
             prefix[i]*=post
             post*=nums[i]
         return prefix
-
+            
         
