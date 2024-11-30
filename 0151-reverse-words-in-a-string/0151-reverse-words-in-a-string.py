@@ -1,21 +1,42 @@
 class Solution:
     def reverseWords(self, s: str) -> str:
-        words=[]
-        l,r=0,0
-        mode=0 if s[0]==' ' else 1
+        # List of words
+        result=[]
 
-        while(r<len(s)):
-            if mode==1 and s[r]==' ':
-                words.append(s[l:r])
-                l=r
-                mode=0
-            elif mode==0 and s[r]!=' ':
-                l=r
-                mode=1
-            r+=1
-        
-        if (s[l:r].isalnum()):
-            words.append(s[l:r])
-        
-        return ' '.join(words[::-1])
+        # Index tracker
+        i=0
+
+        # Keep track of current word
+        curr=""
+
+        # Skip leading spaces
+        while s[i]==' ':
+            i+=1
+
+        # Loop till end of string
+        while i<len(s):
+            # If space found
+            if s[i]==' ':
+                i+=1
+
+                # append current word
+                result.append(curr)
+
+                # Clear it, to store the new word
+                curr=""
+
+                # Skip more than 1 spaces
+                while i<len(s) and s[i]==' ':
+                    i+=1
+            else:
+                # Just append the letter to string
+                curr+=s[i]
+                i+=1
+                
+        # Append last word after loop termination
+        if curr:
+            result.append(curr)
+
+        # We want reverse order, reversing the words
+        return ' '.join(result[::-1])
         
