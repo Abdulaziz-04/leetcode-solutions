@@ -1,15 +1,19 @@
-from collections import Counter
-class Solution:
-    def closeStrings(self, word1: str, word2: str) -> bool:
-        # Base condition
+class Solution(object):
+    def closeStrings(self, word1, word2):
+        """
+        :type word1: str
+        :type word2: str
+        :rtype: bool
+        """
         if len(word1)!=len(word2):
             return False
-        w1=Counter(word1)
-        w2=Counter(word2)
-        if set(w1.keys())!=set(w2.keys()):
+        if set(word1)!=set(word2):
             return False
-        # transform : re-arranges frequencies basically
-        # Comparing sorted versions of frequencies deals with that
-        return sorted(w1.values())==sorted(w2.values())
-        
+        f1=defaultdict(int)
+        f2=defaultdict(int)
+        for w in word1:
+            f1[w]+=1
+        for w in word2:
+            f2[w]+=1
+        return sorted(f1.values())==sorted(f2.values())
         
