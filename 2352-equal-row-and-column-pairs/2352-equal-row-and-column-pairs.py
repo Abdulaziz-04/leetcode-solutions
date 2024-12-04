@@ -1,16 +1,21 @@
-from collections import defaultdict
-class Solution:
-    def equalPairs(self, grid: List[List[int]]) -> int:
+class Solution(object):
+    def equalPairs(self, grid):
+        """
+        :type grid: List[List[int]]
+        :rtype: int
+        """
         result=0
-        row_set=defaultdict(int)
-        for i in range(len(grid)):
-            row_set[tuple(grid[i])]+=1
+        col_set={}
         for i in range(len(grid)):
             col=[]
-            for j in range(len(grid[0])):
+            for j in range(len(grid)):
                 col.append(grid[j][i])
-            if tuple(col) in row_set:
-                result+=row_set[tuple(col)]
+            col=tuple(col)
+            col_set[col]=col_set.get(col,0)+1
+        for row in grid:
+            if tuple(row) in col_set:
+                result+=col_set[tuple(row)]
         return result
+
 
         
