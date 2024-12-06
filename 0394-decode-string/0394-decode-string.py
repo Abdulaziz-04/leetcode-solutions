@@ -1,20 +1,25 @@
-class Solution:
-    def decodeString(self, s: str) -> str:
-        # Keep track of closing bracket
+class Solution(object):
+    def decodeString(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
         stack=[]
-        for c in s:
-            if c!=']':
-                stack.append(c)
+        for i in range(len(s)):
+            if s[i]!=']':
+                stack.append(s[i])
             else:
-                curr_s=''
+                curr=""
                 while stack[-1]!='[':
-                    # maintain order
-                    curr_s=stack.pop()+curr_s
+                    curr=stack.pop()+curr
                 stack.pop()
-                num=''
+                k=""
                 while stack and stack[-1].isdigit():
-                    num=stack.pop()+num
-                stack.append(int(num)*curr_s)
+                    k=stack.pop()+k
+                stack.append(int(k)*curr)
         return ''.join(stack)
-            
+                
+
+
+
         
