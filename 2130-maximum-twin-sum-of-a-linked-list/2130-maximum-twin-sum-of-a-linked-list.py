@@ -1,35 +1,32 @@
 # Definition for singly-linked list.
-# class ListNode:
+# class ListNode(object):
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-class Solution:
-    def pairSum(self, head: Optional[ListNode]) -> int:
-        # Reverse linked list after the mid point
-        slow=head
-        fast=head
-        n=0
+class Solution(object):
+    def pairSum(self, head):
+        """
+        :type head: Optional[ListNode]
+        :rtype: int
+        """
+        slow,fast=head,head.next
         while fast and fast.next:
             slow=slow.next
-            n+=1
             fast=fast.next.next
-        prev=None
-        cur=slow
-        while cur:
-            temp=cur.next
-            cur.next=prev
-            prev=cur
-            cur=temp
-        end=prev
-        start=head
-        l=0
-        mx_val=0
-        while l!=n:
-            mx_val=max(end.val+start.val,mx_val)
-            end=end.next
-            start=start.next
-            l+=1
-        return mx_val
 
-        
+        prev,curr=None,slow.next
+        while curr:
+            tmp=curr.next
+            curr.next=prev
+            prev=curr
+            curr=tmp
+        mxSum=0
+        curr=head
+        while prev and curr:
+            mxSum=max(mxSum,prev.val+curr.val)
+            prev=prev.next
+            curr=curr.next
+        return mxSum
+
+
         
