@@ -1,15 +1,19 @@
-class Solution:
-    def removeElement(self, nums: List[int], val: int) -> int:
-        # Basically, we create a custom index which tracks the non-val eleemnts
-        # If we find an element which is not equal to val then we can add it to the 
-        # Custom index and increment k
-        k=0
-        for i in range(len(nums)):
-            if nums[i]!=val:
-                nums[k]=nums[i]
-                k+=1
-        return k
-
-        
-
+class Solution(object):
+    def removeElement(self, nums, val):
+        """
+        :type nums: List[int]
+        :type val: int
+        :rtype: int
+        """
+        l,r=0,len(nums)-1
+        while l<=r:
+            if nums[l]==val and nums[r]==val:
+                r-=1
+            elif nums[l]==val:
+                nums[l],nums[r]=nums[r],nums[l]
+                l+=1
+                r-=1
+            else:
+                l+=1
+        return l
         
