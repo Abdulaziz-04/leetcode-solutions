@@ -1,46 +1,58 @@
 class Node:
-    def __init__(self,key=-1,value=-1,next=None):
+    def __init__(self,key,val,next=None):
         self.key=key
-        self.val=value
+        self.val=val
         self.next=next
 
-class MyHashMap:
+class MyHashMap(object):
 
     def __init__(self):
-        self.hmap=[Node() for i in range(1000)]
+        self.map=[Node(-1,-1) for i in range(10**4)]
 
     def hash(self,key):
-        return key%len(self.hmap)
-
-    def put(self, key: int, value: int) -> None:
-        idx=self.hash(key)
-        cur=self.hmap[idx]
-        # We need to make sure we reach the end node and not end up at NULL
-        while cur.next:
-            if cur.next.key==key:
-                cur.next.val=value
-                return 
-            cur=cur.next
-        cur.next=Node(key,value)
+        return key%100
         
 
-    def get(self, key: int) -> int:
-        idx=self.hash(key)
-        cur=self.hmap[idx]
-        while cur:
-            if cur.key==key:
-                return cur.val
-            cur=cur.next
+    def put(self, key, value):
+        """
+        :type key: int
+        :type value: int
+        :rtype: None
+        """
+        curr=self.map[self.hash(key)]
+        while curr.next:
+            if curr.next.key==key:
+                curr.next.val=value
+                return
+            curr=curr.next
+        curr.next=Node(key,value)
+        
+
+    def get(self, key):
+        """
+        :type key: int
+        :rtype: int
+        """
+        curr=self.map[self.hash(key)]
+        while curr.next:
+            if curr.next.key==key:
+                return curr.next.val
+            curr=curr.next
         return -1
+            
         
-    def remove(self, key: int) -> None:
-        idx=self.hash(key)
-        cur=self.hmap[idx]
-        while cur and cur.next:
-            if cur.next.key==key:
-                cur.next=cur.next.next
-            cur=cur.next
-        
+
+    def remove(self, key):
+        """
+        :type key: int
+        :rtype: None
+        """
+        curr=self.map[self.hash(key)]
+        while curr and curr.next:
+            if curr.next.key==key:
+                curr.next=curr.next.next
+            curr=curr.next
+            
         
 
 
