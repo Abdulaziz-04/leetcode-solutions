@@ -1,10 +1,15 @@
-class Solution:
-    def maxSubArray(self, nums: List[int]) -> int:
-        mval,cval=nums[0],0
+class Solution(object):
+    def maxSubArray(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        total=0
+        mx_total=nums[0]
         for n in nums:
-            if cval<0:
-                cval=0
-            cval+=n
-            mval=max(mval,cval)
-        return mval
+            if total<0:
+                total=0
+            total+=n
+            mx_total=max(total,mx_total)
+        return mx_total
         
