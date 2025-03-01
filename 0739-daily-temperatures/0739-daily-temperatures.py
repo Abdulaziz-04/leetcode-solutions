@@ -3,12 +3,9 @@ class Solution:
         stack=[]
         result=[0]*len(temperatures)
         for i,t in enumerate(temperatures):
-            while stack and t>stack[-1][0]:
-                temp,ind=stack.pop()
-                result[ind]=i-ind
-            stack.append((t,i))
-        return result    
-
-                
-                
+            while stack and t>stack[-1][1]:
+                curr_idx,temp=stack.pop()
+                result[curr_idx]=i-curr_idx
+            stack.append((i,t))
+        return result
         
