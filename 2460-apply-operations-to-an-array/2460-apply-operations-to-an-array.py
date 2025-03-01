@@ -1,5 +1,6 @@
 class Solution:
     def applyOperations(self, nums: List[int]) -> List[int]:
+
         for i in range(len(nums)-1):
             if nums[i]==nums[i+1]:
                 nums[i]*=2
@@ -9,9 +10,7 @@ class Solution:
             if nums[i]!=0:
                 nums[k]=nums[i]
                 k+=1
-        while k<len(nums):
-            nums[k]=0
-            k+=1
+        for i in range(k,len(nums)):
+            nums[i]=0
         return nums
-
         
