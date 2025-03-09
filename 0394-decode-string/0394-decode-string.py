@@ -1,9 +1,5 @@
-class Solution(object):
-    def decodeString(self, s):
-        """
-        :type s: str
-        :rtype: str
-        """
+class Solution:
+    def decodeString(self, s: str) -> str:
         stack=[]
         for i in range(len(s)):
             if s[i]!=']':
@@ -13,13 +9,9 @@ class Solution(object):
                 while stack[-1]!='[':
                     curr=stack.pop()+curr
                 stack.pop()
-                k=""
+                num=""
                 while stack and stack[-1].isdigit():
-                    k=stack.pop()+k
-                stack.append(int(k)*curr)
+                    num=stack.pop()+num
+                stack.append(int(num)*curr)
         return ''.join(stack)
-                
-
-
-
         
