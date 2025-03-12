@@ -1,10 +1,17 @@
 class Solution:
     def maximumCount(self, nums: List[int]) -> int:
-        pos,neg=0,0
-        for n in nums:
-            if n<0:
-                neg+=1
-            elif n>0:
-                pos+=1
-        return max(pos,neg)
-       
+        l,r=0,len(nums)
+        while l<r:
+            m=l+(r-l)//2
+            if nums[m]>=0:
+                r=m
+            else:
+                l=m+1
+        z1=l
+        while l<len(nums) and nums[l]==0:
+            l+=1
+        if z1==l:
+            return max(l,len(nums)-l)
+        else:
+            return max(z1,len(nums)-l)
+        
