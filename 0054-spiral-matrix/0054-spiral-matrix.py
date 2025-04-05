@@ -10,7 +10,7 @@ class Solution:
             for i in range(t,b):
                 result.append(matrix[i][r-1])
             r-=1
-            if not (l<r and t<b):
+            if not l<r or not t<b:
                 break
             for i in range(r-1,l-1,-1):
                 result.append(matrix[b-1][i])
@@ -20,5 +20,4 @@ class Solution:
             l+=1
         return result
             
-
         
