@@ -1,18 +1,13 @@
-class Solution(object):
-    def minSubArrayLen(self, target, nums):
-        """
-        :type target: int
-        :type nums: List[int]
-        :rtype: int
-        """
-        mn_len=float('inf')
+class Solution:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
         l=0
         total=0
+        longest=float('inf')
         for r in range(len(nums)):
             total+=nums[r]
             while total>=target:
-                mn_len=min(mn_len,r-l+1)
+                longest=min(longest,r-l+1)
                 total-=nums[l]
                 l+=1
-        return 0 if mn_len==float('inf') else mn_len
-        
+        return longest if longest!=float('inf') else 0
+
