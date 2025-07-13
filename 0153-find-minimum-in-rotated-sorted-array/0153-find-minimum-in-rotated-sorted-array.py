@@ -1,6 +1,6 @@
 class Solution:
     def findMin(self, nums: List[int]) -> int:
-        result=nums[0]
+        result=float('inf')
         l,r=0,len(nums)-1
         while l<=r:
             if nums[l]<nums[r]:
@@ -13,4 +13,5 @@ class Solution:
             else:
                 r=m-1
         return result
+
         
