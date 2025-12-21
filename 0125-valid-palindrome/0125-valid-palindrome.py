@@ -1,18 +1,15 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         l,r=0,len(s)-1
-        s=s.lower()
-        def isValid(ch):
-            return ord('a')<=ord(ch)<=ord('z') or ord('0')<=ord(ch)<=ord('9')
         while l<r:
-            while l<r and not isValid(s[l]):
+            while l<r and not s[l].isalnum():
                 l+=1
-            while r>l and not isValid(s[r]):
+            while l<r and not s[r].isalnum():
                 r-=1
-            if s[l]!=s[r]:
+            if s[l].lower()!=s[r].lower():
                 return False
-            else:
-                l+=1
-                r-=1
+            l+=1
+            r-=1
         return True
+
         
