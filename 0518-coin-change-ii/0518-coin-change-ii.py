@@ -1,16 +1,15 @@
 class Solution:
     def change(self, amount: int, coins: List[int]) -> int:
         n=len(coins)
-        dp=[[0]*(amount+1) for i in range(n)]
+        prev=[0]*(amount+1)
         for a in range(amount+1):
             if a%coins[0]==0:
-                dp[0][a]=1
+                prev[a]=1
         for i in range(1,n):
             for a in range(amount+1):
-                dp[i][a]+=dp[i-1][a]
                 if a-coins[i]>=0:
-                    dp[i][a]+=dp[i][a-coins[i]]
-        return dp[n-1][amount]
+                    prev[a]+=prev[a-coins[i]]
+        return prev[amount]
 
 
 
