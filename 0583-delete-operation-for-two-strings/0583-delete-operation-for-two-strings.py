@@ -3,7 +3,7 @@ class Solution:
         n,m=len(word1),len(word2)
         memo={}
         def dfs(i,j):
-            if i==0 or j==0:
+            if i<0 or j<0:
                 return 0
             if (i,j) in memo:
                 return memo[(i,j)]
