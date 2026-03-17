@@ -6,6 +6,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0078-subsets](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/0078-subsets/) | Medium |
 | [0518-coin-change-ii](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/0518-coin-change-ii/) | Medium |
 | [1980-find-unique-binary-string](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/1980-find-unique-binary-string/) | Medium |
 ## Hash Table
@@ -23,6 +24,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Backtracking
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0078-subsets](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/0078-subsets/) | Medium |
 | [1980-find-unique-binary-string](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/1980-find-unique-binary-string/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
@@ -40,4 +42,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0050-powx-n](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/0050-powx-n/) | Medium |
+## Bit Manipulation
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0078-subsets](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/0078-subsets/) | Medium |
 <!---LeetCode Topics End-->
