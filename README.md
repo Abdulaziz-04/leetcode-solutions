@@ -15,6 +15,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0115-distinct-subsequences](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/0115-distinct-subsequences/) | Hard |
 | [0583-delete-operation-for-two-strings](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/0583-delete-operation-for-two-strings/) | Medium |
 | [1092-shortest-common-supersequence](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/1092-shortest-common-supersequence/) | Hard |
 | [1312-minimum-insertion-steps-to-make-a-string-palindrome](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/1312-minimum-insertion-steps-to-make-a-string-palindrome/) | Hard |
@@ -26,6 +27,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0115-distinct-subsequences](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/0115-distinct-subsequences/) | Hard |
 | [0518-coin-change-ii](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/0518-coin-change-ii/) | Medium |
 | [0583-delete-operation-for-two-strings](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/0583-delete-operation-for-two-strings/) | Medium |
 | [1092-shortest-common-supersequence](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/1092-shortest-common-supersequence/) | Hard |
