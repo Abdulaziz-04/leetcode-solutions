@@ -1,20 +1,18 @@
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         result=[]
-        subset=[]
-        def dfs(i):
-            if i>=len(nums):
-                result.append(subset.copy())
+        n=len(nums)
+        def backtrack(i,path):
+            if i==n:
+                result.append(path.copy())
                 return
+            # take
+            path.append(nums[i])
+            backtrack(i+1,path)
+            # not take
+            path.pop()
+            backtrack(i+1,path)
             
-            # include
-            subset.append(nums[i])
-            dfs(i+1)
-
-            #exclude
-            subset.pop()
-            dfs(i+1)
-            
-        dfs(0)
+        backtrack(0,[])
         return result
         
