@@ -16,6 +16,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0044-wildcard-matching](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/0044-wildcard-matching/) | Hard |
 | [0072-edit-distance](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/0072-edit-distance/) | Medium |
 | [0115-distinct-subsequences](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/0115-distinct-subsequences/) | Hard |
 | [0583-delete-operation-for-two-strings](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/0583-delete-operation-for-two-strings/) | Medium |
@@ -30,6 +31,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0044-wildcard-matching](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/0044-wildcard-matching/) | Hard |
 | [0072-edit-distance](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/0072-edit-distance/) | Medium |
 | [0115-distinct-subsequences](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/0115-distinct-subsequences/) | Hard |
 | [0518-coin-change-ii](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/0518-coin-change-ii/) | Medium |
@@ -43,9 +45,14 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Recursion
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0044-wildcard-matching](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/0044-wildcard-matching/) | Hard |
 | [0050-powx-n](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/0050-powx-n/) | Medium |
 ## Bit Manipulation
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0078-subsets](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/0078-subsets/) | Medium |
+## Greedy
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0044-wildcard-matching](https://github.com/Abdulaziz-04/leetcode-solutions/tree/main/0044-wildcard-matching/) | Hard |
 <!---LeetCode Topics End-->
