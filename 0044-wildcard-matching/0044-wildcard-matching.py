@@ -8,7 +8,7 @@ class Solution:
         for j in range(1,m+1):
             flag=True
             for k in range(1,j+1):
-                if p[k-1]=='*':
+                if p[k-1]!='*':
                     flag=False
                     break
             dp[0][j]=flag
